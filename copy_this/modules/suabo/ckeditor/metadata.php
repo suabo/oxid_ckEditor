@@ -37,7 +37,7 @@ $aModule = array(
     'en' => 'Integrates the ckEditor into the OXID backend',
     'de' => 'Integriert den ckEditor in das OXID-Backend',
   ),
-  'version'     => '1.0.0',
+  'version'     => '1.0.1',
   'author'      => 'Marcel Grolms',
   'email'       => 'info@suabo.de',
   'url'         => 'http://www.suabo.de',
