@@ -1,20 +1,24 @@
-# CHF ckEditor
+ckEditor by suabo
+--
+
 Bindet den ckEditor (derzeit in Version 4.2) in den Oxid E-Shop ein.
 Für OXID CE 4.7.x, 4.8.x 
 ## Installation
-1. Kopiere chf_ckeditor in dein modules Verzeichnis
-2. Aktiviere das Modul im Backend unter Erweiterungen - Module - CHF ckEditor
-3. Konfiguriere die .htaccess und .htpasswd Dateien unter chf_ckeditor/pdw_file_browser
-4. Bei Problemen die config Dateien bearbeiten/anpasssen (chf_ckeditor/pdw_file_browser/config.php, chf_ckeditor/src/ckeditor/config.js)
-5. Fertig
+1. Kopiere den Inhalt von "copy_this" in dein Shop root Verzeichnis
+2. Schreibrechte für neues Verzeichnis `/out/ck_editor/` setzen.  
+3. Aktiviere das Modul im Backend unter Erweiterungen - Module - ckEditor by suabo
+
+Viel Spaß mit dem Modul.
 
 ## Screenshots
 ![Screenshot](screenshot.jpg)
 
 ## Probleme
-1. Derzeit treten Probleme mit den Tooltops (?) auf. Diese werden nun als jQuery-Dialog geöffnet
-2. kategorie-langbeschreibung lässt sich nicht speichern.
+Solltet ihr ein Problem mit dem Modul feststellen öffnet bitte einen Issue in GitHub:
+[Fehler auf GitHub melden](https://github.com/suabo/suabo_ckEditor/issues)
 
 ## Lizenz
 Das Modul steht unter GPL.
-Enthält allerdings Teile die unter einer anderen Lizenz stehen (ckeditor, pdw_file_browser).
+Enthält allerdings Teile die unter einer anderen Lizenz stehen:
+- ckeditor
+- pdw_file_browser
