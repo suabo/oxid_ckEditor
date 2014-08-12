@@ -1,10 +1,11 @@
 ckEditor by suabo
 --
 
-Bindet den ckEditor (derzeit in Version 4.2) in den Oxid E-Shop ein.
-Für OXID CE 4.7.x, 4.8.x 
+Bindet den ckEditor (Version 4.2) in den OXID eShop ein.  
+Für OXID CE 4.7.x, 4.8.x
+   
 ## Installation
-1. Kopiere den Inhalt von "copy_this" in dein Shop root Verzeichnis
+1. Kopiere den Inhalt des Verzeichnis `copy_this/` in dein Shop root Verzeichnis
 2. Schreibrechte für neues Verzeichnis `/out/ck_editor/` setzen.  
 3. Aktiviere das Modul im Backend unter Erweiterungen - Module - ckEditor by suabo
 
@@ -15,6 +16,7 @@ Viel Spaß mit dem Modul.
 
 ## Probleme
 Solltet ihr ein Problem mit dem Modul feststellen öffnet bitte einen Issue in GitHub:
+
 [Fehler auf GitHub melden](https://github.com/suabo/suabo_ckEditor/issues)
 
 ## Lizenz
