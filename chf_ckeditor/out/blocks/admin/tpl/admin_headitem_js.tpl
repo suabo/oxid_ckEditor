@@ -11,75 +11,29 @@ var sDefClass = '[{ $default_edit }]';
 var sActClass = '[{$actlocation}]';
 
 [{ if $updatelist == 1}]
-window.onload = function ()
-{
-	top.oxid.admin.updateList('[{ $oxid }]');
-}
+  window.onload = function () { top.oxid.admin.updateList('[{ $oxid }]'); }
 [{ /if}]
 
-
-
-var ajaxpopup = null;
-function showDialog( sParams )
-{
-	ajaxpopup = window.open('[{ $oViewConf->getSelfLink()|replace:"&amp;":"&" }]'+sParams, 'ajaxpopup', 'width=800,height=680,scrollbars=yes,resizable=yes');
+function showDialog( sParams ) {
+	$.fancybox({
+    'href': '[{ $oViewConf->getSelfLink()|replace:"&amp;":"&" }]'+sParams,
+    'type': 'iframe',
+    'autoscale': true,
+    'width': 800,
+    'height': 680 
+  })  
 }
 
-function focusPopup()
-{
-	if ( ajaxpopup )ajaxpopup.focus();
+function cleanupLongDesc( sValue ) {
+	if ( sValue == '<br>' || sValue == '<br />' ) { return ''; } return sValue;
 }
 
-window.onclick = focusPopup;
-
-function cleanupLongDesc( sValue )
-{
-	if ( sValue == '<br>' || sValue == '<br />' ) {
-		return '';
-	}
-	return sValue;
-}
-
-function copyLongDesc( sIdent )
-{
-	// PREVENT DEFAULT
-	//
-	//var textVal = null;
-	//try {
-	//	if ( WPro.editors[sIdent] != null ) {
-	//	   WPro.editors[sIdent].prepareSubmission();
-	//	   textVal = cleanupLongDesc( WPro.editors[sIdent].getValue() );
-	//	}
-	//} catch(err) {
-	//		var varEl = document.getElementById(sIdent);
-	//		if (varEl != null) {
-	//			textVal = cleanupLongDesc( varEl.value );
-	//		}
-	//}
-    //
-	//if (textVal == null) {
-	//	var varName = 'editor_'+sIdent;
-	//	var varEl = document.getElementById(varName);
-	//	if (varEl != null) {
-	//		textVal = cleanupLongDesc( varEl.value );
-	//	}
-	//}
-    //
-	//if (textVal != null) {
-	//	var oTarget = document.getElementsByName( 'editval['+ sIdent + ']' );
-	//	if ( oTarget != null && ( oField = oTarget.item( 0 ) ) != null ) {
-	//		oField.value = textVal;
-	//	}
-	//}
-
+function copyLongDesc( sIdent ) {
 	//get value of editor
 	var textVal = $("#editor_"+sIdent).val();
 	
-	//copy into textarea
-	//$("textarea[name='editval["+sIdent+"]']").val(textVal);
-	$("[name='editval["+sIdent+"]']").val(textVal);
-
+	//copy cleaned long desc into textarea/input
+	$("[name='editval["+sIdent+"]']").val( cleanupLongDesc(textVal) );
 }
-
 -->
 </script>

@@ -1,15 +1,13 @@
-$(document).ready(function(){
-	var prefix = 'editor_';
-	
-	var cmsIdent = ($('input[name="editval[oxcontents__oxloadid]"]').val());
-	
-	if(typeof(cmsIdent) == "undefined" || cmsIdent.indexOf("plain") == -1){
+$(document).ready(function() {
+  //prefix for editor
+	var prefix = 'editor_';	
+	//some security check?
+  var cmsIdent = ($('input[name="editval[oxcontents__oxloadid]"]').val());	
+	if(typeof(cmsIdent) == "undefined" || cmsIdent.indexOf("plain") == -1) {
 		
-		$('textarea[id^="'+prefix+'"]').each(function(){
-			$this = $(this);
-			
-			$this.ckeditor();
-			
+    //replace every textarea with ckeditor
+		$('textarea[id^="'+prefix+'"]').each(function() {
+      $(this).ckeditor();
 		});
 		
 	}
