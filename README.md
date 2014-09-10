@@ -1,4 +1,4 @@
-ckEditor by suabo
+ckEditor for OXID eShop
 --
 
 Bindet den ckEditor (Version 4.2) in den OXID eShop ein.  
