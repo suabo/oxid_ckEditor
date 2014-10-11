@@ -32,14 +32,15 @@ $sMetadataVersion = '1.0';
  */
 $aModule = array(
   'id'          => 'suabo_ckeditor',
-  'title'       => 'ckEditor by suabo',
+  'title'       => 'ckEditor',
   'description' => array(
-    'en' => 'Integrates the ckEditor into the OXID backend',
-    'de' => 'Integriert den ckEditor in das OXID-Backend',
+    'en' => 'Integrates the ckEditor and pdw-file-browser into the OXID backend.',
+    'de' => 'Integriert den ckEditor and pdw-file-browser in das OXID-Backend.',
   ),
-  'version'     => '1.0.1',
+  'version'     => '1.1.0',
   'author'      => 'Marcel Grolms',
   'email'       => 'info@suabo.de',
+  'thumbnail'   => '../logo.png',
   'url'         => 'http://www.suabo.de',
   'extend'      => array(),
   'files'       => array(),
@@ -48,6 +49,14 @@ $aModule = array(
     array('template' => 'headitem.tpl', 'block' => 'admin_headitem_incjs', 'file' => '/out/blocks/admin/tpl/admin_headitem_incjs.tpl'),
     array('template' => 'headitem.tpl', 'block' => 'admin_headitem_js', 'file' => '/out/blocks/admin/tpl/admin_headitem_js.tpl'),
   ),
-  'settings' => array(),
+  'settings' => array(
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorArticle', 'type' => 'bool',  'value' => 'true'),
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorCategory', 'type' => 'bool',  'value' => 'true'),
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorContent', 'type' => 'bool',  'value' => 'true'),
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorNews', 'type' => 'bool',  'value' => 'true'),
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorNewsletter', 'type' => 'bool',  'value' => 'true'),
+    array('group' => 'SUABOCKEDITOR_main', 'name' => 'blCKEditorLinks', 'type' => 'bool',  'value' => 'true'),
+    
+  ),
   'events'   => array(),
 );
