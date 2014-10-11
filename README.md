@@ -1,4 +1,4 @@
-ckEditor by suabo
+ckEditor for OXID eShop
 --
 
 Bindet den ckEditor (Version 4.2) in den OXID eShop ein.  
@@ -17,7 +17,7 @@ Viel Spaß mit dem Modul.
 ## Probleme
 Solltet ihr ein Problem mit dem Modul feststellen öffnet bitte einen Issue in GitHub:
 
-[Fehler auf GitHub melden](https://github.com/suabo/suabo_ckEditor/issues)
+[Fehler auf GitHub melden](https://github.com/suabo/oxid_ckEditor/issues)
 
 ## Lizenz
 Das Modul steht unter GPL.
